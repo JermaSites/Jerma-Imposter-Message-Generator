@@ -67,7 +67,7 @@ templateImage.addEventListener('load', function() {
 let pastData = ["", cypherMode, cheatingMode];
 
 // Gets X coordinate data for char from masterXDict
-// Uses a cycle object to keep track of which coords to userAgent
+// Uses a cycle object to keep track of which coords to use
 // If no cycle object is provided, picks the first set of coordinates
 function getMasterXDict(char, cycle) {
     if (cycle == undefined) {
