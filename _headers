@@ -1,0 +1,5 @@
+/*
+  Permissions-Policy: interest-cohort=()
+
+https://:sus.pages.dev/*
+  X-Robots-Tag: noindex
