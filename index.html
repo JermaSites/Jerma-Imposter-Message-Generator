@@ -1,98 +1,104 @@
 ﻿<!doctype html>
 <html lang="en" class="h-100">
-	<head>
-		<meta charset="utf-8">
-		<link rel="icon"
-		type="image/x-icon" 
-		href="./favicon.png">
 
-		<style>
-			canvas {
-				background-color: white;
-				height: auto;
-			}
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/x-icon" href="./favicon.png">
 
-			.footer-margin {
-				height: 100px;
-			}
-			
-			#options-help-cypher {
-				font-size: 1em;
-				display: none;
-			}
+	<style>
+		canvas {
+			background-color: white;
+			height: auto;
+		}
 
-			#options-help-cheating {
-				font-size: 1em;
-				display: none;
-			}
-			p {
-				display: block;
-				margin-block-start: 0px;
-				margin-block-end: 0px;
-				margin-inline-start: 0px;
-				margin-inline-end: 0px;
-			}
-		</style>
+		.footer-margin {
+			height: 100px;
+		}
 
-		<title>when the imposter is sus! 😳</title>
+		#options-help-cypher {
+			font-size: 1em;
+			display: none;
+		}
 
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="bootstrap.min.css" rel="stylesheet">
-		<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css" integrity="sha512-aqT9YD5gLuLBr6ipQAS+72o5yHKzgZbGxEh6iY8lW/r6gG14e2kBTAJb8XrxzZrMOgSmDqtLaF76T0Z6YY2IHg==" crossorigin="anonymous" />-->	
-	</head>
+		#options-help-cheating {
+			font-size: 1em;
+			display: none;
+		}
 
-	<body class="d-flex flex-column justify-content-center h-100 vsc-initialized">
-		<div class="d-flex justify-content-center">
-			<div id="container" class="container m-4">
-				<div class="row">
-					<div class="d-flex justify-content-center p-3 my-auto">
-						<canvas id="sustext"></canvas>
-					</div>
+		p {
+			display: block;
+			margin-block-start: 0px;
+			margin-block-end: 0px;
+			margin-inline-start: 0px;
+			margin-inline-end: 0px;
+		}
+	</style>
+
+	<title>when the imposter is sus! 😳</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css" integrity="sha512-aqT9YD5gLuLBr6ipQAS+72o5yHKzgZbGxEh6iY8lW/r6gG14e2kBTAJb8XrxzZrMOgSmDqtLaF76T0Z6YY2IHg==" crossorigin="anonymous" />-->
+</head>
+
+<body class="d-flex flex-column justify-content-center h-100 vsc-initialized">
+	<div class="d-flex justify-content-center">
+		<div id="container" class="container m-4">
+			<div class="row">
+				<div class="d-flex justify-content-center p-3 my-auto">
+					<canvas id="sustext"></canvas>
 				</div>
+			</div>
 
-				<div id="input-container-container" class="row">
-					<center>
-						<p id="dumbassAlert"></p>
-					</center>
-					<div class="input-container">
-						<input type="text" placeholder="when the imposter is sus! 😳" id="susInput" class="form-control form-control-lg text-center">
-					</div>
+			<div id="input-container-container" class="row">
+
+				<p style="text-align:center" id="dumbassAlert"></p>
+
+				<div class="input-container">
+					<input type="text" placeholder="when the imposter is sus! 😳" id="susInput"
+						class="form-control form-control-lg text-center">
 				</div>
+			</div>
 
-				<div class="row options-container">
-					<div class="options d-flex justify-content-center align-items-center p-3">
-						<input type="checkbox" id="cypher" onMouseOver="show_cypher()" onMouseOut="hide_cypher()">
-						<label for="cypher" style="padding-left: 0.5em; padding-right: 1em;" onMouseOver="show_cypher()" onMouseOut="hide_cypher()"> Cypher Mode</label>
-						<input type="checkbox" id="cheating" onMouseOver="show_cheating()" onMouseOut="hide_cheating()">
-						<label for="cheating" style="padding-left: 0.5em;" onMouseOver="show_cheating()" onMouseOut="hide_cheating()"> Cheating Mode</label>
+			<div class="row options-container">
+				<div class="options d-flex justify-content-center align-items-center p-3">
+					<input type="checkbox" id="cypher" onMouseOver="show_cypher()" onMouseOut="hide_cypher()">
+					<label for="cypher" style="padding-left: 0.5em; padding-right: 1em;" onMouseOver="show_cypher()"
+						onMouseOut="hide_cypher()"> Cypher Mode</label>
+					<input type="checkbox" id="cheating" onMouseOver="show_cheating()" onMouseOut="hide_cheating()">
+					<label for="cheating" style="padding-left: 0.5em;" onMouseOver="show_cheating()" onMouseOut="hide_cheating()">
+						Cheating Mode</label>
+				</div>
+				<div style="min-height: 3em">
+					<div id="options-help-cypher">
+						No letters, only barcode. One of the strongest encryption methods on the planet
 					</div>
-					<div style="min-height: 3em">
-						<div id="options-help-cypher">
-							No letters, only barcode. One of the strongest encryption methods on the planet
-						</div>
 
-						<div id="options-help-cheating">
-							Theoretically supports all characters, works by selecting a random slice of jerma's face then writing a letter above it
-						</div>
+					<div id="options-help-cheating">
+						Theoretically supports all characters, works by selecting a random slice of jerma's face then writing a
+						letter above it
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<footer class="footer py-3 bg-light position-fixed bottom-0" style="width: 100%">
-			<div class="container">
-				<span class="text-muted">
-					Made by <a href="https://github.com/aechaechaech">ⓗⓗⓗ</a> 
-				</span>
-			</div>
-		</footer>
+	<footer class="footer py-3 bg-light position-fixed bottom-0" style="width: 100%">
+		<div class="container">
+			<span class="text-muted">
+				Made by <a href="https://github.com/aechaechaech">ⓗⓗⓗ</a>
+			</span>
+		</div>
+	</footer>
 
-		<canvas id="lilstupidasstextcanvas"></canvas>
+	<canvas id="lilstupidasstextcanvas"></canvas>
 
-		<script src="scripts.js"></script>
-		<script src="bootstrap.bundle.min.js"></script>
-		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/js/bootstrap.bundle.min.js" integrity="sha512-43iShtbiyImxjjU4a9rhXBy7eKtIsrpll8xKhe1ghKqh5NyfME8phZs5JRFZpRBe1si44WM3tNmnqMym7JRmDQ==" crossorigin="anonymous"></script>-->
-		<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8a624e372b2b42baa0649413c7246f5e"}'></script>
-	</body>
+	<script src="scripts.js"></script>
+	<script src="bootstrap.bundle.min.js"></script>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/js/bootstrap.bundle.min.js" integrity="sha512-43iShtbiyImxjjU4a9rhXBy7eKtIsrpll8xKhe1ghKqh5NyfME8phZs5JRFZpRBe1si44WM3tNmnqMym7JRmDQ==" crossorigin="anonymous"></script>-->
+	<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+		data-cf-beacon='{"token": "8a624e372b2b42baa0649413c7246f5e"}'></script>
+</body>
+
 </html>

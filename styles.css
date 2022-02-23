@@ -1,151 +1,148 @@
 /* ubuntu-regular - latin */
 @font-face {
-	font-family: 'Ubuntu';
-	font-style: normal;
-	font-weight: 400;
-	src: 
-		url('../fonts/ubuntu-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('../fonts/ubuntu-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  
-  /* ubuntu-700 - latin */
-  @font-face {
-	font-family: 'Ubuntu';
-	font-style: normal;
-	font-weight: 700;
-	src:
-		url('../fonts/ubuntu-v15-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('../fonts/ubuntu-v15-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ubuntu-v15-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/ubuntu-v15-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* ubuntu-700 - latin */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ubuntu-v15-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/ubuntu-v15-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 #container {
-    height: auto;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-	flex-direction: column;
-	width: 100%;
-	z-index: 2;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  z-index: 2;
 }
 
 #inputContainer {
-    display: flex;
-	height: 5%;
-	width: 30%;
-	position: relative;
+  display: flex;
+  height: 5%;
+  width: 30%;
+  position: relative;
 }
 
 .input-container {
-	display: flex;
-	height: 5vh;
-	width: 50vh;
-	position: relative;
-	border: 1px solid #a9a9a9;
-	justify-content: space-between;
-	margin: 10px;
-	max-width: 80vw;
+  display: flex;
+  height: 5vh;
+  width: 50vh;
+  position: relative;
+  border: 1px solid #a9a9a9;
+  justify-content: space-between;
+  margin: 10px;
+  max-width: 80vw;
 }
-.input-container input:focus, .input-container input:active {
-    outline: none;
+.input-container input:focus,
+.input-container input:active {
+  outline: none;
 }
 .input-container input {
-    border: none;
+  border: none;
 }
 
 #input-container-container {
-	width: 100%;
-	height: auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	transform: translate(0%, 45vh);
-	transition-property: transform;
-	transition-duration: 1s;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(0%, 45vh);
+  transition-property: transform;
+  transition-duration: 1s;
 }
 
 #usernameInput {
-	width: 100%;
-	height: 100%;
-	font-size: larger;
+  width: 100%;
+  height: 100%;
+  font-size: larger;
 }
 
-
 button {
-	width: 30%;
-	font-size: larger;
+  width: 30%;
+  font-size: larger;
 }
 
 .infoText {
-	bottom: 0;
-	padding: 1em;
-	height: auto;
-	position: absolute;
-	font-size: 2em;
-	font-family: 'Ubuntu', sans-serif;
+  bottom: 0;
+  padding: 1em;
+  height: auto;
+  position: absolute;
+  font-size: 2em;
+  font-family: "Ubuntu", sans-serif;
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 #error-message {
-	opacity: 0%;
-	transition: opacity 0.5s ease;
-	font-size: large;
-	font-family: 'Ubuntu', sans-serif;
+  opacity: 0%;
+  transition: opacity 0.5s ease;
+  font-size: large;
+  font-family: "Ubuntu", sans-serif;
 }
 
 img {
-	height: 50vw;
-	position: absolute;
-	max-height: 50vh;
-	opacity: 0%; 
-	transform: translate(0%, 45vh);
-	transition: opacity 0.5s ease;
-	display:none;
+  height: 50vw;
+  position: absolute;
+  max-height: 50vh;
+  opacity: 0%;
+  transform: translate(0%, 45vh);
+  transition: opacity 0.5s ease;
+  display: none;
 }
 
 .options {
-	font-size: 2em;
-	font-family: 'Ubuntu', sans-serif;
-	display: flex;
-	align-items: center;
-	position: relative;
+  font-size: 2em;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .options-container {
-	position: absolute;
-    top: 0;
-    padding: 1em;
-	height: auto;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}
-
-.options  > *{
+  position: absolute;
+  top: 0;
+  padding: 1em;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 #options-help-cypher {
-	font-size: 1em;
-	font-family: 'Ubuntu', sans-serif;
-	padding: 1em;
-	display: none;
+  font-size: 1em;
+  font-family: "Ubuntu", sans-serif;
+  padding: 1em;
+  display: none;
 }
 
 #options-help-cheating {
-	font-size: 1em;
-	font-family: 'Ubuntu', sans-serif;
-	padding: 1em;
-	display: none;
+  font-size: 1em;
+  font-family: "Ubuntu", sans-serif;
+  padding: 1em;
+  display: none;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
   transform: scale(2);
   height: auto;
 }
