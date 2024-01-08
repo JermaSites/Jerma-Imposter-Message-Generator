@@ -64,25 +64,39 @@ templateImage.addEventListener('load', function() {
     ctx.drawImage(templateImage, 0, 0);
 })
 
-for (const property in masterXDict) {
-    let rand = Math.random();
-    rand *= masterXDict[property].length;
-    rand = Math.floor(rand);
-    
-    masterXDict[property] = masterXDict[property][rand]
-}
-
 let pastData = ["", cypherMode, cheatingMode];
+
+// Gets X coordinate data for char from masterXDict
+// Uses a cycle object to keep track of which coords to use
+// If no cycle object is provided, picks the first set of coordinates
+function getMasterXDict(char, cycle) {
+    if (cycle == undefined) {
+        return masterXDict[char][0];
+    }
+    
+    x_coords = masterXDict[char];
+    let coord_index = 0;
+    if (x_coords.length > 1) {
+        if (char in cycle) {
+            cycle[char]++;
+        } else {
+            cycle[char] = 0;
+        }
+        coord_index = cycle[char] % x_coords.length;
+    }
+    return x_coords[coord_index];
+}
 
 // a function that gets the width of the current susmsg
 function getWidth(susMsg) {
     let totalWidth = 0;
+    let cycle = {};
 
     for (const char of susMsg) {
         let x_choords;
 
         if (char in masterXDict) {
-            x_coords = masterXDict[char];
+            x_coords = getMasterXDict(char, cycle);
             totalWidth += x_coords[1] - x_coords[0];
         } else if (char in bootlegXDict) {
             x_coords = bootlegXDict[char][1];
@@ -167,11 +181,12 @@ setInterval( function() {
     totalWidth = 0;
     width = 0;
     let flipArr = [];
+    let cycle = {};
     for (const char of susMsg ) {
         if (char in masterXDict) {
             // normal default characters
-            x_coords = masterXDict[char]
-            width = x_coords[1] - x_coords[0]
+            x_coords = getMasterXDict(char, cycle);
+            width = x_coords[1] - x_coords[0];
 
             ctx.drawImage(templateImage, x_coords[0], 0, width, canvas.height, totalWidth, 0 , width, canvas.height);
         } else if (char in bootlegXDict) {
